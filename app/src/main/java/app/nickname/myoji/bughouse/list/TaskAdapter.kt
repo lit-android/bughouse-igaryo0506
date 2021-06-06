@@ -1,6 +1,7 @@
 package app.nickname.myoji.bughouse.list
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,11 +26,10 @@ class TaskAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
+        holder.nameTextView.text = item.name
         holder.container.setOnClickListener {
             itemClickListener.onItemClick(position)
         }
-        holder.nameTextView.text = item.name
-
     }
 
     fun addAll(items: List<Task>) {

@@ -29,14 +29,15 @@ class ListActivity : AppCompatActivity() {
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@ListActivity, DetailActivity::class.java)
                 intent.putExtra("TASK_NAME", taskList[position].name)
+                startActivity(intent)
             }
         })
 
         recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
         adapter.addAll(taskList)
 
         addButton.setOnClickListener {
-            Log.d("xxx","ok")
             val name = editText.text.toString()
             taskList.add(Task(name))
             adapter.addAll(taskList)
