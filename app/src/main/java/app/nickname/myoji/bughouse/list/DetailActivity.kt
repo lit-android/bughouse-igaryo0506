@@ -12,9 +12,9 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         val textView: TextView = findViewById(R.id.text_view)
-        val backButton: Button = findViewById(R.id.button)
+        val backButton: Button = findViewById(R.id.back_button)
 
-        val text = intent.getStringExtra("TODO_NAME")
+        val text = intent.getStringExtra("TASK_NAME")
         textView.text = text
 
         backButton.setOnClickListener {

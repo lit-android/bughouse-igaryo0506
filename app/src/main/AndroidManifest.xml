@@ -19,6 +19,9 @@
         </activity>
         <activity android:name=".count.CountActivity"/>
         <activity android:name=".load.LoadActivity"/>
+        <activity android:name=".save.SaveActivity"/>
+        <activity android:name=".list.ListActivity"/>
+        <activity android:name=".list.DetailActivity"/>
     </application>
 
 </manifest>
